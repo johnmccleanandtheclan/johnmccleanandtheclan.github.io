@@ -1,0 +1,933 @@
+/* Combined CSS for John McClean and the Clan site */
+
+/* fonts */
+@font-face {
+  font-family: 'Abel';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/abel/v18/MwQ5bhbm2POE2V9BPbh5uGM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: italic;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/sourcecodepro/v31/HI_QiYsKILxRpg3hIP6sJ7fM7PqlONvUlMIFxGC8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/sourcecodepro/v31/HI_SiYsKILxRpg3hIP6sJ7fM7PqlPevWnsUnxg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Main site styles */
+:root {
+  color-scheme: dark;
+  color: #f6f4ee;
+  background: #060404;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+button, input, textarea, select {
+  font: inherit;
+}
+
+/* Site styles */
+main {
+    font-family: Source Code Pro, Arial, sans-serif;
+    line-height: 1.75em;
+    font-style: normal;
+    color: #fff
+}
+a,
+a:visited {
+  color: #e7d0ba;
+  text-decoration: none;
+}
+article header h1 a,
+article header h1 a:visited {
+  color: #fff;
+}
+h1,
+h2,
+h3 {
+  text-rendering: optimizeLegibility;
+}
+h1:not(.site-title):not(.logo-image):not(.page-title),
+.entry-title {
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: 48px;
+  line-height: 1.35em;
+  letter-spacing: 0px;
+  text-transform: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 7px;
+  font-size: 60px;
+  font-family: Abel, Arial, sans-serif;
+  line-height: 1em;
+  font-style: normal;
+}
+h1:not(.site-title):not(.page-title),
+.entry-title {
+  color: #fff;
+}
+h2,
+.menu-selector #navbuttontop {
+  text-transform: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 4px;
+  font-size: 54px;
+  font-family: Abel, Arial, sans-serif;
+  line-height: 1.1em;
+  font-style: normal;
+  color: #fff;
+}
+h3,
+.sqs-audio-playlist .album-title,
+.menu-block .menu-section-title {
+  text-transform: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 30px;
+  font-family: Abel, Arial, sans-serif;
+  line-height: 1.2em;
+  font-style: normal;
+  color: #fff;
+}
+h1:not(.site-title):not(.entry-title),
+h2,
+h3 {
+  margin: 1.5em auto 0.3em;
+}
+h1:not(.site-title):not(.entry-title):first-child,
+h2:first-child,
+h3:first-child {
+  margin-top: 0;
+}
+h1 + h1:not(.site-title):not(.entry-title),
+h1 + h2,
+h1 + h3,
+h2 + h1:not(.site-title):not(.entry-title),
+h2 + h2,
+h2 + h3,
+h3 + h1:not(.site-title):not(.entry-title),
+h3 + h2,
+h3 + h3 {
+  margin-top: 24px;
+}
+blockquote {
+  margin: 0;
+  padding: 0.5em 2.5em;
+  font-style: italic;
+  border-left: 1px solid #fff;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: rgba(6, 4, 4, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.brand-logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 0.35rem;
+  background: #fff;
+}
+.brand-title {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.menu-toggle {
+  display: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: inherit;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+}
+.main-nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.main-nav a {
+  color: #f6f4ee;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+.main-nav a:hover {
+  color: #ffcc00;
+}
+.hero {
+  min-height: 84vh;
+  display: grid;
+  place-items: center;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  color: #f7f2e9;
+  background: linear-gradient(180deg, rgba(6, 4, 4, 0.5), rgba(6, 4, 4, 0.9)), url('../assets/images/band-pic-3.jpg') center/cover no-repeat;
+}
+.hero-copy {
+  max-width: 1200px;
+}
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.26em;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  color: #ffd54f;
+}
+.hero h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.75rem, 5vw, 5rem);
+  line-height: 1.02;
+}
+.hero p {
+  max-width: 760px;
+  margin: 0 auto 1.75rem;
+  color: #f0ece4;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.button-container {
+  align-self: center;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 21px 34px;
+  border: solid 2px #ffcc00;
+  color: #ffcc00;
+  background-color: #060404;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: Source Code Pro, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.button:hover {
+  background-color: #fff;
+  color: #060404;
+}
+.button-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  padding: 0.95rem 1.5rem;
+}
+.section {
+  padding: 5rem 1.5rem;
+}
+.section:first-child {
+  border-top: none;
+}
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.section h2 {
+  margin-top: 0;
+  font-size: 2.25rem;
+}
+.section p {
+  max-width: 780px;
+  margin: 0 auto 1.75rem;
+}
+.section-band .band-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1.4fr 1fr;
+  align-items: start;
+  margin-top: 2rem;
+}
+.band-grid ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+.band-grid li {
+  margin-bottom: 0.75rem;
+}
+.band-image {
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+.band-image img {
+  margin: auto;
+  width: auto;
+  height: 100%;
+  border-radius: 1rem;
+}
+.section-music {
+  max-height: fit-content;
+  padding: 3rem 0;
+}
+.section-tour {
+  position: relative;
+  color: #f7f2e9;
+  background: url('../assets/images/ireland-landscape.jpg') center/cover no-repeat;
+}
+.section-tour .section-inner {
+  position: relative;
+  z-index: 1;
+}
+.section-tour::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 4, 4, 0.35);
+}
+.section-bandcamp .bandcamp-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 2rem;
+  align-items: center;
+}
+.section-bandcamp img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+.music-overview {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+.album-cover {
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.track-list {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.track-card {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.track-card h3 {
+  margin-top: 0;
+}
+.video-grid {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+.video-frame {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #000;
+}
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.section-contact {
+  position: relative;
+  color: #f7f2e9;
+  background: url('../assets/images/angie-bonds-photo.jpg') center/cover no-repeat;
+}
+.section-contact .section-inner {
+  padding: 100px 0;
+}
+.section-contact form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.section-contact label {
+  display: grid;
+  gap: 0.5rem;
+  color: #f5f1e7;
+}
+.section-contact input,
+.section-contact textarea {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0.85rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #f6f4ee;
+}
+.section-contact textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+.note {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+.site-footer {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: rgba(246, 244, 238, 0.75);
+}
+
+/** overlay **/
+.section-contact .section-overlay,
+.section-bandcamp .section-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 4, 4, 0.7);
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .section-band .band-grid,
+  .section-bandcamp .bandcamp-inner,
+  .music-overview {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 1rem;
+  }
+  .section + .section {
+    margin-top: 1.5rem;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: rgba(6, 4, 4, 0.95);
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.25s ease;
+  }
+  .main-nav.open {
+    max-height: 320px;
+    padding: 1rem 0;
+  }
+  .main-nav a {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .menu-toggle {
+    display: inline-flex;
+  }
+}
+
+#productList .product {
+  color: #fff;
+}
+.sqs-block-summary-v2 .summary-title,
+.sqs-block-summary-v2 .summary-heading {
+  font-family: "Raleway", Arial, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-family: Abel, Arial, sans-serif;
+  font-style: normal;
+  color: #fff;
+}
+
+/** video background **/
+.section-video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background-size: cover;
+  background-position: center;
+}
+
+.sqs-video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.sqs-video-background iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw; /* 16:9 aspect ratio */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 16:9 aspect ratio */
+  transform: translate(-50%, -50%);
+  border: 0;
+  pointer-events: none;
+}
+
+.section.has-main-image {
+  position: relative;
+}
+
+.section.has-main-video {
+  position: relative;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.section.has-main-image .section-inner,
+.section.has-main-video .section-inner {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: inherit;
+  padding: 5rem 1.5rem;
+}
+
+.section-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 5;
+}
+
+/** bandcamp albums **/
+#bandcamp {
+  position: relative;
+  background-image: url('../assets/images/exile.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.albums-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .albums-grid {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+}
+
+.album-item {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.album-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.album-item h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+/** fb **/
+.fb_iframe_widget--holder {
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+.fb_iframe_widget--holder iframe {
+  border-radius: 1rem;
+}
+
+/** spotify buttons **/
+.button-spotify {
+  background-color: #1DB954;
+  color: #fff;
+  border-color: #1DB954;
+}
+
+.button-spotify:hover {
+  background-color: #1ed760;
+  border-color: #1ed760;
+}
+
+.button-apple-music {
+  background-color: #FA243C;
+  color: #fff;
+  border-color: #FA243C;
+}
+
+.button-apple-music:hover {
+  background-color: #E01C33;
+  border-color: #E01C33;
+}
+
+.button-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.button-instagram {
+  background-color: #E1306C;
+  color: #fff;
+  border-color: #E1306C;
+}
+
+.button-instagram:hover {
+  background-color: #C71A58;
+  border-color: #C71A58;
+}
+
+.button-facebook {
+  background-color: #1877F2;
+  color: #fff;
+  border-color: #1877F2;
+}
+
+.button-facebook:hover {
+  background-color: #165FD9;
+  border-color: #165FD9;
+}
+
+.button-bandcamp {
+  background-color: #1DA7D8;
+  color: #fff;
+  border-color: #1DA7D8;
+}
+
+.button-bandcamp:hover {
+  background-color: #157AA4;
+  border-color: #157AA4;
+}
+
+.streaming-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.streaming-links {
+  margin-top: 4rem;
+  padding: 3rem 2rem 0 2rem;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.streaming-links p {
+  margin: 0 0 1.5rem 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.streaming-links a {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.spotify-player {
+  max-width: 600px;
+  margin: 2rem 0;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.15);
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.spotify-player iframe {
+  width: 100%;
+  height: 380px;
+  border: 0;
+}
+
+/* @media (max-width: 768px) {
+  .spotify-player iframe {
+    height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .spotify-player iframe {
+    height: 280px;
+  }
+} */
+
+/** utility classes **/
+.center {
+  text-align: center;
+}
+.no-main-image {
+  background-image: none;
+}
+.u-padding {
+  padding: 1.5rem;
+}
+.u-padding-top {
+  padding-top: 1.5rem;
+}
+.u-padding-bottom {
+  padding-bottom: 1.5rem;
+}
+.u-margin {
+  margin: 1.5rem;
+}
+.u-margin-top {
+  margin-top: 1.5rem;
+}
+.u-margin-bottom {
+  margin-bottom: 1.5rem;
+}
+
+.fuzzy-bg {
+  text-shadow: 3px 3px 5px #000;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Header styles */
+#header {
+  padding: 0 30px;
+  box-sizing: border-box;
+  z-index: 1002;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 1em;
+  position: relative;
+  background-color: #100806;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#header a { text-decoration: none; }
+.header-inner {
+  padding: 30px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+#logoWrapper, #logoImage, #siteTitleWrapper, #siteTitle { text-align: center; }
+#logoWrapper, #siteTitleWrapper { position: relative; left: 50%; transform: translate(-50%,0); }
+#logoWrapper, #logoImage { height: auto; width: 140px; line-height: 1; }
+#siteTitleWrapper, #siteTitle { width: 255px; }
+#logoImage a {
+    display: inline-block;
+}
+#logoImage img { width: 140px; max-width: 140px; height: auto; }
+#header #logoWrapper,#header #siteTitleWrapper {
+    text-align: center;
+    display: inline-block;
+}
+#mainNavWrapper { text-align: center; }
+.header-nav {
+  margin: 10px 0 0 0;
+}
+#mainNavigation > div:nth-child(4) {
+  margin-right: var(--half-center-width, 0);
+}
+#mainNavigation > div:nth-child(5) {
+  margin-left: var(--half-center-width, 0);
+}
+@media screen and (min-width: 973px) {
+  .header-nav {
+    margin: -52px 0 55px -52px;
+  }
+}
+nav#mainNavigation, #overlayNav nav, #mobileNavigation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+}
+nav#mainNavigation a, #overlayNav a { color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: 2px; font-family: Source Code Pro, Arial, sans-serif; font-size: 12px; padding: .5em .75em; }
+nav#mainNavigation a:hover, #overlayNav a:hover, nav#mainNavigation a:active, #overlayNav a:active, nav#mainNavigation a:visited:hover, #overlayNav a:visited:hover { color: #fff; outline: none; }
+nav#mainNavigation .active a, #overlayNav .active a { color: #fff; }
+.show-on-scroll.attach, .show-on-scroll-mobile.attach {
+  position: fixed;
+  top: 12px;
+  left: 0;
+  width: 100%;
+  z-index: 1010;
+  background-color: #100806; 
+  transition: opacity .14s ease-in-out, visibility 0s .14s linear, top .14s ease-in-out, margin-top .14s ease-in-out;
+  transform: translateY(-12px);
+  margin-top: 0;
+}
+.show-on-scroll.attach nav {
+  padding: 0.75rem;
+}
+.header-nav.show-on-scroll.attach {
+  margin: 0;
+  --half-center-width: 0 !important;
+}
+@media screen and (min-width: 973px) {
+  .show-on-scroll:not(.attach) {
+    margin-top: -85px;
+  }
+}
+.show-on-scroll-mobile.attach {
+  top: 40px;
+  left: 20px;
+  height: 30px;
+  width: 30px;
+}
+.show-on-scroll, .show-on-scroll-mobile {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.mobile-nav-toggle-label { cursor: pointer; display: none; position: absolute; z-index: 1002; top: 30px; left: 30px; width: 22px; height: 17px; outline: 10px solid #000; /*: rgba(255,255,255,.6);*/ }
+.mobile-nav-toggle-label .top-bar, .mobile-nav-toggle-label .middle-bar, .mobile-nav-toggle-label .bottom-bar { position: absolute; right: 0; width: 22px; height: 2px; background-color: #fff; transition: transform .1s ease-in-out, top .1s ease-in-out; transform-origin: 50% 50%; }
+.mobile-nav-toggle-label .top-bar { top: 0; }
+.mobile-nav-toggle-label .middle-bar { top: 7px; }
+.mobile-nav-toggle-label .bottom-bar { top: 14px; }
+#overlayNav {
+  position: fixed;
+  z-index: 1001;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  line-height: 1em;
+  text-align: left;
+  overflow: auto;
+  pointer-events: none;
+  background-color: rgba(16, 8, 6, 0.97);
+  transition: opacity 0.14s 0s ease-in-out, visibility 0s 0.14s linear;
+}
+#overlayNav #mobileNavWrapper { position: relative; width: 100%; height: 100%; padding: 100px 0; display: table; text-align: center; }
+#overlayNav #mobileNavWrapper nav { display: table-cell; vertical-align: middle; }
+#overlayNav #mobileNavWrapper nav div a { display: block; padding: 0.5em 0; font-size: 54px; }
+#mobileNavToggle:checked ~ #overlayNav { opacity: 1; visibility: visible; pointer-events: auto; }
+#mobileNavToggle:checked ~ #header { pointer-events: none; background-color: transparent; }
+#mobileNavToggle:checked ~ #header .mobile-nav-toggle-label { pointer-events: auto; z-index: 1011; }
+#mobileNavToggle:checked ~ #header .mobile-nav-toggle-label .top-bar { transform: rotate(45deg); top: 7px; }
+#mobileNavToggle:checked ~ #header .mobile-nav-toggle-label .middle-bar { opacity: 0; }
+#mobileNavToggle:checked ~ #header .mobile-nav-toggle-label .bottom-bar { transform: rotate(-45deg); top: 7px; }
+@media screen and (max-width: 768px) {
+  .mobile-nav-toggle-label { display: inline-block; }
+  #header .header-nav { display: none; }
+  #mainNavWrapper { display: none; }
+  nav#mainNavigation { flex-direction: column; }
+  nav#mainNavigation .index { margin-bottom: .5rem; }
+  #header #logoWrapper #logoImage img,
+  #header #siteTitleWrapper #logoImage img {
+    max-height: 50px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+  }
+}
+@media screen and (min-width: 769px) {
+  #overlayNav { display: none; }
+  .mobile-nav-toggle-label { display: none; }
+}
+
+@media only screen and (max-width: 768px) {
+  h1:not(.site-title):not(.page-title):not(.flyoutitem-title),.entry-title {
+    font-size: 48px !important;
+    letter-spacing: 2px !important
+  }
+  h2:not(.OT_subtitle) {
+    font-size: 36px !important;
+    letter-spacing: 2px !important
+  }
+  h3 {
+    font-size: 27px !important
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  #overlayNav #mobileNavWrapper nav div a,#overlayNav #mobileNavWrapper nav div label {
+    font-size: 24px;
+  }
+  h1:not(.site-title):not(.page-title):not(.flyoutitem-title),.entry-title {
+    font-size: 34px !important;
+    letter-spacing: 2px !important
+  }
+  h2:not(.OT_subtitle) {
+    font-size: 26px !important;
+    letter-spacing: 2px !important
+  }
+  h3 {
+    font-size: 20px !important
+  }
+}
