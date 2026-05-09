@@ -67,6 +67,29 @@ const APP = (() => {
         mobileScrollToggle.classList.toggle('attach', scrolled && window.innerWidth <= 768);
       }
       centerNav();
+      updateActiveSection();
+    };
+
+    const updateActiveSection = () => {
+      const sections = Array.from(document.querySelectorAll('main section[id]'));
+      if (!sections.length) return;
+
+      const offset = Math.max(window.innerHeight * 0.2, 120);
+      const scrollPosition = window.scrollY + offset;
+      let activeSectionId = sections[0].id;
+
+      sections.forEach((section) => {
+        if (section.offsetTop <= scrollPosition) {
+          activeSectionId = section.id;
+        }
+      });
+
+      navLinks.forEach((link) => {
+        const parent = link.closest('div');
+        if (!parent) return;
+        const linkHref = link.getAttribute('href');
+        parent.classList.toggle('active', linkHref === `#${activeSectionId}`);
+      });
     };
 
     const closeMobileNav = () => {
